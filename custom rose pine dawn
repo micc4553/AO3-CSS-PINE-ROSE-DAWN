@@ -443,8 +443,10 @@ col.name {
 #header .heading a::before {
   content: "ʚAO3ɞ";
   font-weight: 700;
-  font-size: 1.15em;
+  font-size: 1.5em;
   color: #26233a;
+  position: relative;
+  top: 2px;
 }
 
 #header .heading a:is(:hover,
@@ -1457,13 +1459,19 @@ fieldset.actions li:not(:first-child) {
   margin-right: 0.5em;
 }
 
-.chapter .secondary,
-.download .secondary {
+.chapter .secondary {
   top: unset;
   right: unset;
   left: 50%;
   width: fit-content;
   transform: translate(-50%, 2.6em);
+}
+
+.download .secondary {
+  top: unset;
+  right: 0;
+  left: auto;
+  transform: translate(-25%, 2.6em);
 }
 
 .dashboard .header .landmark {
@@ -3676,4 +3684,8 @@ rect {
 
 .tox .tox-edit-area__iframe {
   background-color: #fffaf3;
+}
+
+a.tag {
+  font-weight: 700 !important;
 }
