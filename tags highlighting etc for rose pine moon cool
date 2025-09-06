@@ -39,3 +39,64 @@ a.tag[href*="Omega%20Draco%20Malfoy"] {
   color: #26233A !important;
   background-color: #eb6f92 !important;
 }
+
+.blurb ul.required-tags li span {
+  border-radius: 0 15px 15px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.blurb ul.required-tags li span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.blurb ul.required-tags li span:hover::before {
+  filter: brightness(1.15);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+
+.blurb ul.required-tags li span:hover {
+  transform: translateY(-1px);
+}
+
+.blurb .header:has(ul.required-tags) {
+  display: block;
+  margin: 0;
+}
+
+.blurb .header h3.heading {
+  order: unset;
+  flex: unset;
+  padding-right: unset;
+  box-sizing: unset;
+  font-size: 1.25em;
+  text-align: left;
+  word-break: break-word;
+}
+
+.blurb h5.fandoms.heading {
+  order: unset;
+  margin-top: unset;
+}
+
+.blurb .header ul.required-tags {
+  order: unset;
+  display: unset;
+  flex-wrap: unset;
+  column-gap: unset;
+  position: absolute;
+  width: unset;
+  margin-top: unset;
+  padding-top: unset;
+  border-top: none;
+}
