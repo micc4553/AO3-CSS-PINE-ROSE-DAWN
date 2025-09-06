@@ -91,12 +91,80 @@ a.tag[href*="Omega%20Draco%20Malfoy"] {
 
 .blurb .header ul.required-tags {
   order: unset;
-  display: unset;
-  flex-wrap: unset;
+  display: flex;
+  flex-wrap: wrap;
   column-gap: unset;
   position: absolute;
-  width: unset;
+  width: auto;
+  max-width: 60px;
   margin-top: unset;
   padding-top: unset;
   border-top: none;
+}
+
+.blurb .header ul.required-tags li {
+  flex-basis: 50%;
+}
+
+.blurb .header ul.required-tags {
+  order: unset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: unset;
+  position: absolute;
+  width: auto;
+  max-width: 60px;
+  margin-top: unset;
+  padding-top: unset;
+  border-top: none;
+}
+
+.blurb .header ul.required-tags li {
+  flex-basis: 50%;
+}
+
+.blurb .header h3.heading {
+  order: unset;
+  flex: unset;
+  padding-right: unset;
+  box-sizing: unset;
+  font-size: 1.25em;
+  text-align: left;
+  word-break: break-word;
+  margin-bottom: 0;
+}
+
+.blurb h5.fandoms.heading {
+  order: unset;
+  margin-top: 0.5em;
+}
+
+.blurb .header ul.required-tags {
+  order: unset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: unset;
+  position: absolute;
+  width: auto;
+  max-width: 60px;
+  margin-top: unset;
+  padding-top: unset;
+  border-top: none;
+}
+
+.blurb .header ul.required-tags li {
+  flex-basis: 50%;
+  margin-bottom: 0.2em;
+}
+
+.blurb .header h3.heading {
+  order: unset;
+  flex: unset;
+  padding-right: unset;
+  padding-left: 70px;
+  box-sizing: unset;
+  font-size: 1.25em;
+  text-align: left;
+  word-break: break-word;
+  margin-bottom: 0;
 }
