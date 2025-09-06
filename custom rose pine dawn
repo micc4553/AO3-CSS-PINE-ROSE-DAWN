@@ -2026,48 +2026,6 @@ li.picture.blurb,
   padding: 0;
 }
 
-.blurb .header:has(ul.required-tags) {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  justify-content: space-between;
-}
-
-.blurb .header .heading {
-  margin: 0;
-}
-
-.blurb .header h3.heading {
-  order: 1;
-  flex: 1;
-  padding-right: 11ch;
-  box-sizing: border-box;
-  font-size: 1.25em;
-  text-align: left;
-  word-break: break-word;
-}
-
-.blurb h5.fandoms.heading {
-  order: 4;
-  margin-top: 0.5em;
-}
-
-.blurb h5.fandoms.heading:not(:has(a.tag)) {
-  height: 0;
-}
-
-.blurb .header ul.required-tags {
-  order: 3;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 0.25em;
-  position: unset;
-  width: 100%;
-  margin-top: 0.429em;
-  padding-top: 0.643em;
-  border-top: 1px solid #e4d1c9;
-}
-
 .blurb .userstuff.summary {
   font-size: 1.2em;
   padding-left: 1em;
