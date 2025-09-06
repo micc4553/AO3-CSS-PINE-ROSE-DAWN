@@ -1,0 +1,15 @@
+#header li.search {
+  margin-left: auto;
+  order: 6;
+}
+
+.characters a.tag[href*="Scorpius%20Malfoy"],
+a.tag[href*="Bottom%20Harry%20Potter"],
+a.tag[href*="Sub%20Harry%20Potter"],
+a.tag[href*="Omega%20Harry%20Potter"],
+a.tag[href*="Top%20Draco%20Malfoy"],
+a.tag[href*="Dom%20Draco%20Malfoy"],
+a.tag[href*="Alpha%20Draco%20Malfoy"] {
+  color: #26233A !important;
+  background-color: #e0def4 !important;
+}
