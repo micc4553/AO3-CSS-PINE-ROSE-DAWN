@@ -7,9 +7,35 @@
 a.tag[href*="Bottom%20Harry%20Potter"],
 a.tag[href*="Sub%20Harry%20Potter"],
 a.tag[href*="Omega%20Harry%20Potter"],
+a.tag[href*="Pregnant%20Harry%20Potter"],
 a.tag[href*="Top%20Draco%20Malfoy"],
 a.tag[href*="Dom%20Draco%20Malfoy"],
 a.tag[href*="Alpha%20Draco%20Malfoy"] {
   color: #26233A !important;
   background-color: #e0def4 !important;
+}
+
+a.tag[href*="Drunk"],
+a.tag[href*="Alcohol"],
+a.tag[href*="Drug"],
+a.tag[href*="Drunk"],
+a.tag[href*="Abuse"],
+a.tag[href*="Desi"],
+a.tag[href*="Veela"],
+a.tag[href*="Trans"],
+a.tag[href*="Suicid"],
+a.tag[href*="Cutting"],
+a.tag[href*="Depress"],
+a.tag[href*="Smoking"],
+a.tag[href*="Crossdress"],
+a.tag[href*="Down%20and%20Out"],
+a.tag[href*="Top%20Harry%20Potter"],
+a.tag[href*="Dom%20Harry%20Potter"],
+a.tag[href*="Alpha%20Harry%20Potter"],
+a.tag[href*="Pregnant%20Draco%20Malfoy"],
+a.tag[href*="Bottom%20Draco%20Malfoy"],
+a.tag[href*="Sub%20Draco%20Malfoy"],
+a.tag[href*="Omega%20Draco%20Malfoy"] {
+  color: #26233A !important;
+  background-color: #dfdad9 !important;
 }
