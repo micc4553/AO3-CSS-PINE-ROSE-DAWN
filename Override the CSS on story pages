@@ -1,0 +1,77 @@
+// ==UserScript==
+// @name         AO3 Default CSS for Work Pages
+// @namespace    http://tampermonkey.net/
+// @version      1.2
+// @description  Apply default background and text colors to AO3 story text only
+// @author       You
+// @match        https://archiveofourown.org/works/*
+// @match        https://www.archiveofourown.org/works/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Only run on work pages (not collections, series, etc.)
+    if (!window.location.pathname.match(/^\/works\/\d+/)) {
+        return;
+    }
+
+    // Apply styling only to story text content
+    const defaultStyles = `
+        /* Only affect the story text content, title, summary, and chapter headings */
+        #chapters .chapter .userstuff,
+        #chapters .chapter .userstuff *,
+        #chapters .chapter h3.title,
+        #chapters .chapter h3.title *,
+        #chapters .chapter .title,
+        #chapters .chapter .title *,
+        .chapter h3,
+        .chapter h3 *,
+        .work .title,
+        .work .title *,
+        .work .preface .title,
+        .work .preface .title *,
+        h2.title,
+        h2.title a,
+        .summary,
+        .summary *,
+        .work .summary,
+        .work .summary *,
+        .work .summary .userstuff,
+        .work .summary .userstuff *,
+        .work .preface .summary,
+        .work .preface .summary *,
+        dd.summary,
+        dd.summary *,
+        .meta dd.summary,
+        .meta dd.summary * {
+            color: #2a2a2a !important;
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
+        /* Set white background for story text container and surrounding area */
+        #chapters .chapter {
+            background-color: #ffffff !important;
+            background-image: none !important;
+        }
+
+        /* White background for the chapters section, main content area, title and summary areas */
+        #chapters,
+        #main,
+        .work .title,
+        .work .summary {
+            background-color: #ffffff !important;
+            background-image: none !important;
+        }
+    `;
+
+    // Create and inject the style element
+    const styleElement = document.createElement('style');
+    styleElement.type = 'text/css';
+    styleElement.innerHTML = defaultStyles;
+    document.head.appendChild(styleElement);
+
+    console.log('AO3 story text styling applied');
+})();
