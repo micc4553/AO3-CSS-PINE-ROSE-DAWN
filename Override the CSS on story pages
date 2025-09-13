@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         AO3 Default CSS for Work Pages
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Apply default background and text colors to AO3 story text only
+// @version      1.3
+// @description  Apply default background and text colors to AO3 story text for both single and multi-chapter works
 // @author       You
 // @match        https://archiveofourown.org/works/*
 // @match        https://www.archiveofourown.org/works/*
@@ -17,9 +17,9 @@
         return;
     }
 
-    // Apply styling only to story text content
+    // Apply styling to both single-chapter and multi-chapter story content
     const defaultStyles = `
-        /* Only affect the story text content, title, summary, and chapter headings */
+        /* MULTI-CHAPTER STORIES - Original selectors */
         #chapters .chapter .userstuff,
         #chapters .chapter .userstuff *,
         #chapters .chapter h3.title,
@@ -28,6 +28,16 @@
         #chapters .chapter .title *,
         .chapter h3,
         .chapter h3 *,
+        
+        /* SINGLE-CHAPTER STORIES - Additional selectors */
+        .work .userstuff,
+        .work .userstuff *,
+        div.userstuff.module,
+        div.userstuff.module *,
+        .userstuff,
+        .userstuff *,
+        
+        /* UNIVERSAL SELECTORS - Work for both types */
         .work .title,
         .work .title *,
         .work .preface .title,
@@ -51,19 +61,37 @@
             background-image: none !important;
         }
 
-        /* Set white background for story text container and surrounding area */
+        /* Set white background for story text containers - Multi-chapter */
         #chapters .chapter {
             background-color: #ffffff !important;
             background-image: none !important;
         }
+        
+        /* Set white background for story text containers - Single-chapter */
+        .work div.userstuff.module,
+        .work .userstuff {
+            background-color: #ffffff !important;
+            background-image: none !important;
+        }
 
-        /* White background for the chapters section, main content area, title and summary areas */
+        /* White background for main content areas - Both types */
         #chapters,
         #main,
         .work .title,
-        .work .summary {
+        .work .summary,
+        .work {
             background-color: #ffffff !important;
             background-image: none !important;
+        }
+        
+        /* Extra specificity for stubborn single-chapter text */
+        #main .work .userstuff p,
+        #main .work .userstuff div,
+        #main .work .userstuff span,
+        #main .work div.userstuff.module p,
+        #main .work div.userstuff.module div,
+        #main .work div.userstuff.module span {
+            color: #2a2a2a !important;
         }
     `;
 
@@ -73,5 +101,5 @@
     styleElement.innerHTML = defaultStyles;
     document.head.appendChild(styleElement);
 
-    console.log('AO3 story text styling applied');
+    console.log('AO3 story text styling applied for both single and multi-chapter works');
 })();
