@@ -50,7 +50,20 @@
         dd.summary,
         dd.summary *,
         .meta dd.summary,
-        .meta dd.summary * {
+        .meta dd.summary *,
+        /* NOTES SECTIONS */
+        .notes,
+        .notes *,
+        .work .notes,
+        .work .notes *,
+        .work .preface .notes,
+        .work .preface .notes *,
+        #chapters .chapter .notes,
+        #chapters .chapter .notes *,
+        dd.notes,
+        dd.notes *,
+        .end.notes,
+        .end.notes * {
             color: #2a2a2a !important;
             background-color: transparent !important;
             background-image: none !important;
